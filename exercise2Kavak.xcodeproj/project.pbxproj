@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		626F371C239F01B100E01AD0 /* gnome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626F371B239F01B100E01AD0 /* gnome.swift */; };
+		626F3721239F030A00E01AD0 /* endPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626F3720239F030A00E01AD0 /* endPoint.swift */; };
+		626F3723239F035D00E01AD0 /* apiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626F3722239F035D00E01AD0 /* apiHandler.swift */; };
+		626F3726239F03F900E01AD0 /* extensionDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626F3725239F03F900E01AD0 /* extensionDictionary.swift */; };
 		62AE7515239EFFAB00CF710C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE7514239EFFAB00CF710C /* AppDelegate.swift */; };
 		62AE7517239EFFAB00CF710C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE7516239EFFAB00CF710C /* SceneDelegate.swift */; };
 		62AE7519239EFFAB00CF710C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE7518239EFFAB00CF710C /* ViewController.swift */; };
@@ -36,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		626F371B239F01B100E01AD0 /* gnome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gnome.swift; sourceTree = "<group>"; };
+		626F3720239F030A00E01AD0 /* endPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = endPoint.swift; sourceTree = "<group>"; };
+		626F3722239F035D00E01AD0 /* apiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiHandler.swift; sourceTree = "<group>"; };
+		626F3725239F03F900E01AD0 /* extensionDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionDictionary.swift; sourceTree = "<group>"; };
 		62AE7511239EFFAB00CF710C /* exercise2Kavak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = exercise2Kavak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62AE7514239EFFAB00CF710C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62AE7516239EFFAB00CF710C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +86,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		626F371A239F019F00E01AD0 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				626F371B239F01B100E01AD0 /* gnome.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		626F371E239F02CE00E01AD0 /* supportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				62AE7514239EFFAB00CF710C /* AppDelegate.swift */,
+				62AE7516239EFFAB00CF710C /* SceneDelegate.swift */,
+				62AE7525239EFFAD00CF710C /* Info.plist */,
+			);
+			path = supportingFiles;
+			sourceTree = "<group>";
+		};
+		626F371F239F02FC00E01AD0 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				626F3720239F030A00E01AD0 /* endPoint.swift */,
+				626F3722239F035D00E01AD0 /* apiHandler.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		626F3724239F03D500E01AD0 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				626F3725239F03F900E01AD0 /* extensionDictionary.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
 		62AE7508239EFFAB00CF710C = {
 			isa = PBXGroup;
 			children = (
@@ -101,13 +144,14 @@
 		62AE7513239EFFAB00CF710C /* exercise2Kavak */ = {
 			isa = PBXGroup;
 			children = (
-				62AE7514239EFFAB00CF710C /* AppDelegate.swift */,
-				62AE7516239EFFAB00CF710C /* SceneDelegate.swift */,
+				626F3724239F03D500E01AD0 /* extension */,
+				626F371F239F02FC00E01AD0 /* api */,
+				626F371E239F02CE00E01AD0 /* supportingFiles */,
+				626F371A239F019F00E01AD0 /* model */,
 				62AE7518239EFFAB00CF710C /* ViewController.swift */,
 				62AE751A239EFFAB00CF710C /* Main.storyboard */,
 				62AE7520239EFFAD00CF710C /* Assets.xcassets */,
 				62AE7522239EFFAD00CF710C /* LaunchScreen.storyboard */,
-				62AE7525239EFFAD00CF710C /* Info.plist */,
 				62AE751D239EFFAB00CF710C /* exercise2Kavak.xcdatamodeld */,
 			);
 			path = exercise2Kavak;
@@ -263,9 +307,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				62AE7519239EFFAB00CF710C /* ViewController.swift in Sources */,
+				626F3723239F035D00E01AD0 /* apiHandler.swift in Sources */,
 				62AE7515239EFFAB00CF710C /* AppDelegate.swift in Sources */,
+				626F3721239F030A00E01AD0 /* endPoint.swift in Sources */,
 				62AE7517239EFFAB00CF710C /* SceneDelegate.swift in Sources */,
 				62AE751F239EFFAB00CF710C /* exercise2Kavak.xcdatamodeld in Sources */,
+				626F371C239F01B100E01AD0 /* gnome.swift in Sources */,
+				626F3726239F03F900E01AD0 /* extensionDictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,7 +495,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.andres.exercise2Kavak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -464,7 +512,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.andres.exercise2Kavak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
