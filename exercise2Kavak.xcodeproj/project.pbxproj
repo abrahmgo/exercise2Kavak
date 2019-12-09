@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		62AE7515239EFFAB00CF710C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE7514239EFFAB00CF710C /* AppDelegate.swift */; };
+		62AE7517239EFFAB00CF710C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE7516239EFFAB00CF710C /* SceneDelegate.swift */; };
+		62AE7519239EFFAB00CF710C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE7518239EFFAB00CF710C /* ViewController.swift */; };
+		62AE751C239EFFAB00CF710C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62AE751A239EFFAB00CF710C /* Main.storyboard */; };
+		62AE751F239EFFAB00CF710C /* exercise2Kavak.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62AE751D239EFFAB00CF710C /* exercise2Kavak.xcdatamodeld */; };
+		62AE7521239EFFAD00CF710C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62AE7520239EFFAD00CF710C /* Assets.xcassets */; };
+		62AE7524239EFFAD00CF710C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62AE7522239EFFAD00CF710C /* LaunchScreen.storyboard */; };
+		62AE752F239EFFAD00CF710C /* exercise2KavakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE752E239EFFAD00CF710C /* exercise2KavakTests.swift */; };
+		62AE753A239EFFAD00CF710C /* exercise2KavakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE7539239EFFAD00CF710C /* exercise2KavakUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		62AE752B239EFFAD00CF710C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62AE7509239EFFAB00CF710C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62AE7510239EFFAB00CF710C;
+			remoteInfo = exercise2Kavak;
+		};
+		62AE7536239EFFAD00CF710C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62AE7509239EFFAB00CF710C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62AE7510239EFFAB00CF710C;
+			remoteInfo = exercise2Kavak;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		62AE7511239EFFAB00CF710C /* exercise2Kavak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = exercise2Kavak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		62AE7514239EFFAB00CF710C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		62AE7516239EFFAB00CF710C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		62AE7518239EFFAB00CF710C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		62AE751B239EFFAB00CF710C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		62AE751E239EFFAB00CF710C /* exercise2Kavak.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = exercise2Kavak.xcdatamodel; sourceTree = "<group>"; };
+		62AE7520239EFFAD00CF710C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		62AE7523239EFFAD00CF710C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		62AE7525239EFFAD00CF710C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62AE752A239EFFAD00CF710C /* exercise2KavakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = exercise2KavakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		62AE752E239EFFAD00CF710C /* exercise2KavakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exercise2KavakTests.swift; sourceTree = "<group>"; };
+		62AE7530239EFFAD00CF710C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62AE7535239EFFAD00CF710C /* exercise2KavakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = exercise2KavakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		62AE7539239EFFAD00CF710C /* exercise2KavakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exercise2KavakUITests.swift; sourceTree = "<group>"; };
+		62AE753B239EFFAD00CF710C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		62AE750E239EFFAB00CF710C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62AE7527239EFFAD00CF710C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62AE7532239EFFAD00CF710C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		62AE7508239EFFAB00CF710C = {
+			isa = PBXGroup;
+			children = (
+				62AE7513239EFFAB00CF710C /* exercise2Kavak */,
+				62AE752D239EFFAD00CF710C /* exercise2KavakTests */,
+				62AE7538239EFFAD00CF710C /* exercise2KavakUITests */,
+				62AE7512239EFFAB00CF710C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		62AE7512239EFFAB00CF710C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62AE7511239EFFAB00CF710C /* exercise2Kavak.app */,
+				62AE752A239EFFAD00CF710C /* exercise2KavakTests.xctest */,
+				62AE7535239EFFAD00CF710C /* exercise2KavakUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		62AE7513239EFFAB00CF710C /* exercise2Kavak */ = {
+			isa = PBXGroup;
+			children = (
+				62AE7514239EFFAB00CF710C /* AppDelegate.swift */,
+				62AE7516239EFFAB00CF710C /* SceneDelegate.swift */,
+				62AE7518239EFFAB00CF710C /* ViewController.swift */,
+				62AE751A239EFFAB00CF710C /* Main.storyboard */,
+				62AE7520239EFFAD00CF710C /* Assets.xcassets */,
+				62AE7522239EFFAD00CF710C /* LaunchScreen.storyboard */,
+				62AE7525239EFFAD00CF710C /* Info.plist */,
+				62AE751D239EFFAB00CF710C /* exercise2Kavak.xcdatamodeld */,
+			);
+			path = exercise2Kavak;
+			sourceTree = "<group>";
+		};
+		62AE752D239EFFAD00CF710C /* exercise2KavakTests */ = {
+			isa = PBXGroup;
+			children = (
+				62AE752E239EFFAD00CF710C /* exercise2KavakTests.swift */,
+				62AE7530239EFFAD00CF710C /* Info.plist */,
+			);
+			path = exercise2KavakTests;
+			sourceTree = "<group>";
+		};
+		62AE7538239EFFAD00CF710C /* exercise2KavakUITests */ = {
+			isa = PBXGroup;
+			children = (
+				62AE7539239EFFAD00CF710C /* exercise2KavakUITests.swift */,
+				62AE753B239EFFAD00CF710C /* Info.plist */,
+			);
+			path = exercise2KavakUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		62AE7510239EFFAB00CF710C /* exercise2Kavak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62AE753E239EFFAD00CF710C /* Build configuration list for PBXNativeTarget "exercise2Kavak" */;
+			buildPhases = (
+				62AE750D239EFFAB00CF710C /* Sources */,
+				62AE750E239EFFAB00CF710C /* Frameworks */,
+				62AE750F239EFFAB00CF710C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = exercise2Kavak;
+			productName = exercise2Kavak;
+			productReference = 62AE7511239EFFAB00CF710C /* exercise2Kavak.app */;
+			productType = "com.apple.product-type.application";
+		};
+		62AE7529239EFFAD00CF710C /* exercise2KavakTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62AE7541239EFFAD00CF710C /* Build configuration list for PBXNativeTarget "exercise2KavakTests" */;
+			buildPhases = (
+				62AE7526239EFFAD00CF710C /* Sources */,
+				62AE7527239EFFAD00CF710C /* Frameworks */,
+				62AE7528239EFFAD00CF710C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				62AE752C239EFFAD00CF710C /* PBXTargetDependency */,
+			);
+			name = exercise2KavakTests;
+			productName = exercise2KavakTests;
+			productReference = 62AE752A239EFFAD00CF710C /* exercise2KavakTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		62AE7534239EFFAD00CF710C /* exercise2KavakUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62AE7544239EFFAD00CF710C /* Build configuration list for PBXNativeTarget "exercise2KavakUITests" */;
+			buildPhases = (
+				62AE7531239EFFAD00CF710C /* Sources */,
+				62AE7532239EFFAD00CF710C /* Frameworks */,
+				62AE7533239EFFAD00CF710C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				62AE7537239EFFAD00CF710C /* PBXTargetDependency */,
+			);
+			name = exercise2KavakUITests;
+			productName = exercise2KavakUITests;
+			productReference = 62AE7535239EFFAD00CF710C /* exercise2KavakUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		62AE7509239EFFAB00CF710C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = Andres;
+				TargetAttributes = {
+					62AE7510239EFFAB00CF710C = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					62AE7529239EFFAD00CF710C = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 62AE7510239EFFAB00CF710C;
+					};
+					62AE7534239EFFAD00CF710C = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 62AE7510239EFFAB00CF710C;
+					};
+				};
+			};
+			buildConfigurationList = 62AE750C239EFFAB00CF710C /* Build configuration list for PBXProject "exercise2Kavak" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 62AE7508239EFFAB00CF710C;
+			productRefGroup = 62AE7512239EFFAB00CF710C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				62AE7510239EFFAB00CF710C /* exercise2Kavak */,
+				62AE7529239EFFAD00CF710C /* exercise2KavakTests */,
+				62AE7534239EFFAD00CF710C /* exercise2KavakUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		62AE750F239EFFAB00CF710C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62AE7524239EFFAD00CF710C /* LaunchScreen.storyboard in Resources */,
+				62AE7521239EFFAD00CF710C /* Assets.xcassets in Resources */,
+				62AE751C239EFFAB00CF710C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62AE7528239EFFAD00CF710C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62AE7533239EFFAD00CF710C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		62AE750D239EFFAB00CF710C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62AE7519239EFFAB00CF710C /* ViewController.swift in Sources */,
+				62AE7515239EFFAB00CF710C /* AppDelegate.swift in Sources */,
+				62AE7517239EFFAB00CF710C /* SceneDelegate.swift in Sources */,
+				62AE751F239EFFAB00CF710C /* exercise2Kavak.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62AE7526239EFFAD00CF710C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62AE752F239EFFAD00CF710C /* exercise2KavakTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62AE7531239EFFAD00CF710C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62AE753A239EFFAD00CF710C /* exercise2KavakUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		62AE752C239EFFAD00CF710C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62AE7510239EFFAB00CF710C /* exercise2Kavak */;
+			targetProxy = 62AE752B239EFFAD00CF710C /* PBXContainerItemProxy */;
+		};
+		62AE7537239EFFAD00CF710C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62AE7510239EFFAB00CF710C /* exercise2Kavak */;
+			targetProxy = 62AE7536239EFFAD00CF710C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		62AE751A239EFFAB00CF710C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62AE751B239EFFAB00CF710C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		62AE7522239EFFAD00CF710C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62AE7523239EFFAD00CF710C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		62AE753C239EFFAD00CF710C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		62AE753D239EFFAD00CF710C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		62AE753F239EFFAD00CF710C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = exercise2Kavak/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andres.exercise2Kavak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		62AE7540239EFFAD00CF710C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = exercise2Kavak/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andres.exercise2Kavak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		62AE7542239EFFAD00CF710C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = exercise2KavakTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andres.exercise2KavakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/exercise2Kavak.app/exercise2Kavak";
+			};
+			name = Debug;
+		};
+		62AE7543239EFFAD00CF710C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = exercise2KavakTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andres.exercise2KavakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/exercise2Kavak.app/exercise2Kavak";
+			};
+			name = Release;
+		};
+		62AE7545239EFFAD00CF710C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = exercise2KavakUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andres.exercise2KavakUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = exercise2Kavak;
+			};
+			name = Debug;
+		};
+		62AE7546239EFFAD00CF710C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = exercise2KavakUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andres.exercise2KavakUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = exercise2Kavak;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		62AE750C239EFFAB00CF710C /* Build configuration list for PBXProject "exercise2Kavak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62AE753C239EFFAD00CF710C /* Debug */,
+				62AE753D239EFFAD00CF710C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62AE753E239EFFAD00CF710C /* Build configuration list for PBXNativeTarget "exercise2Kavak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62AE753F239EFFAD00CF710C /* Debug */,
+				62AE7540239EFFAD00CF710C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62AE7541239EFFAD00CF710C /* Build configuration list for PBXNativeTarget "exercise2KavakTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62AE7542239EFFAD00CF710C /* Debug */,
+				62AE7543239EFFAD00CF710C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62AE7544239EFFAD00CF710C /* Build configuration list for PBXNativeTarget "exercise2KavakUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62AE7545239EFFAD00CF710C /* Debug */,
+				62AE7546239EFFAD00CF710C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		62AE751D239EFFAB00CF710C /* exercise2Kavak.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				62AE751E239EFFAB00CF710C /* exercise2Kavak.xcdatamodel */,
+			);
+			currentVersion = 62AE751E239EFFAB00CF710C /* exercise2Kavak.xcdatamodel */;
+			path = exercise2Kavak.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 62AE7509239EFFAB00CF710C /* Project object */;
+}
