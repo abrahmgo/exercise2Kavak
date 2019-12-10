@@ -17,5 +17,6 @@ class gnome: Codable {
     var height : Double?
     var professions : [String]?
     var friends : [String]?
+    var hairColor : String?
     
 }

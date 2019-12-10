@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
 class gnomeViewModel {
     
     var apiManager = apiHandler()
     var dataSourceGnome = [gnome]()
+    var dataSourceGnomeImages : [String:UIImage]?
     
     func getDataFromApi(withUrl: String, completion: @escaping (([String:Any]) -> Void))
     {
@@ -27,6 +29,7 @@ class gnomeViewModel {
             {
                 self.apiManager.cleanGnomes(data: info) { (info) in
                     self.dataSourceGnome = info
+                    self.getUniqueImages()
                     completion(true)
                 }
             }
@@ -34,6 +37,15 @@ class gnomeViewModel {
             {
                 self.dataSourceGnome.removeAll()
             }
+        }
+    }
+    
+    func donwloadImages(completion: @escaping (([String:UIImage]) -> Void))
+    {
+        let urlImages = getUniqueImages()
+        apiManager.downLoadImages(imageUrls: urlImages) { (dicImages) in
+            self.dataSourceGnomeImages = dicImages
+            completion(dicImages)
         }
     }
     
@@ -47,5 +59,64 @@ class gnomeViewModel {
     {
         let gnomeIndex =  dataSourceGnome[index]
         return gnomeIndex
+    }
+    
+    func getGnomeImageAtIndex(url: String) -> UIImage?
+    {
+        if dataSourceGnomeImages?.count != 0
+        {
+            guard let image = dataSourceGnomeImages?[url] else {
+                return nil
+            }
+            return image
+        }
+        else
+        {
+            return nil
+        }
+    }
+    
+    func getUniqueHairColor() -> [String]
+    {
+        let hairColor = dataSourceGnome.map( {$0.hairColor! })
+        return hairColor
+    }
+    
+    func getUniqueProfessions() -> [String]
+    {
+        let profesion = dataSourceGnome.map( {$0.professions! })
+        let reduceProfesion = profesion.reduce([], +)
+        return reduceProfesion
+    }
+    
+    func getMaxHeight() -> Double
+    {
+        let weight = self.dataSourceGnome.map { $0.weight! }
+        return weight.max()!
+    }
+    
+    func getMinHeight() -> Double
+    {
+        let weight = self.dataSourceGnome.map { $0.weight! }
+        return weight.min()!
+    }
+    
+    func getMaxAge() -> Int
+    {
+        let age = self.dataSourceGnome.map { $0.age! }
+        return age.max()!
+    }
+    
+    func getMinAge() -> Int
+    {
+        let age = self.dataSourceGnome.map { $0.age! }
+        return age.min()!
+    }
+    
+    func getUniqueImages() -> [String]
+    {
+        let images = self.dataSourceGnome.map( {$0.thumbnail!} )
+        let reduceImages = Array(Set(images))
+        return reduceImages
     }
 }

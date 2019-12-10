@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class apiHandler {
     
@@ -49,5 +50,27 @@ class apiHandler {
             gnomes.append(uniqueGnome)
         }
         completion(gnomes)
+    }
+    
+    func downLoadImages(imageUrls: [String], completion: @escaping (([String:UIImage]) -> Void))
+    {
+        let urlImages = imageUrls
+        var arrImages = [String : UIImage]()
+        let dispatchGroup = DispatchGroup()
+        
+        for urlImage in urlImages
+        {
+            dispatchGroup.enter()
+            let imageDownloaded = UIImage()
+            imageDownloaded.downloaded(from: urlImage) { (image, urlImage2) in
+                DispatchQueue.main.async {
+                    arrImages[urlImage2] = image
+                    dispatchGroup.leave()
+                }
+            }
+        }
+        dispatchGroup.notify(queue: .main) {
+            completion(arrImages)
+        }
     }
 }

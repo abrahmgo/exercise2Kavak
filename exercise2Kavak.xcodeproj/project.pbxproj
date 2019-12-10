@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6260354F239F244D006A6CAA /* allGnomesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6260354E239F244D006A6CAA /* allGnomesViewController.swift */; };
+		62603551239F2B3B006A6CAA /* extensionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62603550239F2B3B006A6CAA /* extensionUIImage.swift */; };
 		626F371C239F01B100E01AD0 /* gnome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626F371B239F01B100E01AD0 /* gnome.swift */; };
 		626F3721239F030A00E01AD0 /* endPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626F3720239F030A00E01AD0 /* endPoint.swift */; };
 		626F3723239F035D00E01AD0 /* apiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626F3722239F035D00E01AD0 /* apiHandler.swift */; };
@@ -14,13 +16,14 @@
 		626F3729239F04F500E01AD0 /* gnomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626F3728239F04F500E01AD0 /* gnomeViewModel.swift */; };
 		62AE7515239EFFAB00CF710C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE7514239EFFAB00CF710C /* AppDelegate.swift */; };
 		62AE7517239EFFAB00CF710C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE7516239EFFAB00CF710C /* SceneDelegate.swift */; };
-		62AE7519239EFFAB00CF710C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE7518239EFFAB00CF710C /* ViewController.swift */; };
 		62AE751C239EFFAB00CF710C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62AE751A239EFFAB00CF710C /* Main.storyboard */; };
 		62AE751F239EFFAB00CF710C /* exercise2Kavak.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62AE751D239EFFAB00CF710C /* exercise2Kavak.xcdatamodeld */; };
 		62AE7521239EFFAD00CF710C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62AE7520239EFFAD00CF710C /* Assets.xcassets */; };
 		62AE7524239EFFAD00CF710C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62AE7522239EFFAD00CF710C /* LaunchScreen.storyboard */; };
 		62AE752F239EFFAD00CF710C /* exercise2KavakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE752E239EFFAD00CF710C /* exercise2KavakTests.swift */; };
 		62AE753A239EFFAD00CF710C /* exercise2KavakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE7539239EFFAD00CF710C /* exercise2KavakUITests.swift */; };
+		62AFABF6239F1F56008D02CA /* customLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AFABF5239F1F56008D02CA /* customLayout.swift */; };
+		62BA7BD8239F5D0900B9188A /* gnomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA7BD7239F5D0900B9188A /* gnomeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6260354E239F244D006A6CAA /* allGnomesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allGnomesViewController.swift; sourceTree = "<group>"; };
+		62603550239F2B3B006A6CAA /* extensionUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionUIImage.swift; sourceTree = "<group>"; };
 		626F371B239F01B100E01AD0 /* gnome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gnome.swift; sourceTree = "<group>"; };
 		626F3720239F030A00E01AD0 /* endPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = endPoint.swift; sourceTree = "<group>"; };
 		626F3722239F035D00E01AD0 /* apiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiHandler.swift; sourceTree = "<group>"; };
@@ -49,7 +54,6 @@
 		62AE7511239EFFAB00CF710C /* exercise2Kavak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = exercise2Kavak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62AE7514239EFFAB00CF710C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62AE7516239EFFAB00CF710C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		62AE7518239EFFAB00CF710C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		62AE751B239EFFAB00CF710C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		62AE751E239EFFAB00CF710C /* exercise2Kavak.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = exercise2Kavak.xcdatamodel; sourceTree = "<group>"; };
 		62AE7520239EFFAD00CF710C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 		62AE7535239EFFAD00CF710C /* exercise2KavakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = exercise2KavakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62AE7539239EFFAD00CF710C /* exercise2KavakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exercise2KavakUITests.swift; sourceTree = "<group>"; };
 		62AE753B239EFFAD00CF710C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62AFABF5239F1F56008D02CA /* customLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customLayout.swift; sourceTree = "<group>"; };
+		62BA7BD7239F5D0900B9188A /* gnomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gnomeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				626F3725239F03F900E01AD0 /* extensionDictionary.swift */,
+				62603550239F2B3B006A6CAA /* extensionUIImage.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -134,8 +141,8 @@
 		626F372A239F078400E01AD0 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				62AFABF4239F1F3A008D02CA /* allGnomes */,
 				62AE751A239EFFAB00CF710C /* Main.storyboard */,
-				62AE7518239EFFAB00CF710C /* ViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -192,6 +199,16 @@
 				62AE753B239EFFAD00CF710C /* Info.plist */,
 			);
 			path = exercise2KavakUITests;
+			sourceTree = "<group>";
+		};
+		62AFABF4239F1F3A008D02CA /* allGnomes */ = {
+			isa = PBXGroup;
+			children = (
+				62AFABF5239F1F56008D02CA /* customLayout.swift */,
+				6260354E239F244D006A6CAA /* allGnomesViewController.swift */,
+				62BA7BD7239F5D0900B9188A /* gnomeCollectionViewCell.swift */,
+			);
+			path = allGnomes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,15 +342,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62AE7519239EFFAB00CF710C /* ViewController.swift in Sources */,
 				626F3723239F035D00E01AD0 /* apiHandler.swift in Sources */,
 				62AE7515239EFFAB00CF710C /* AppDelegate.swift in Sources */,
 				626F3729239F04F500E01AD0 /* gnomeViewModel.swift in Sources */,
+				62603551239F2B3B006A6CAA /* extensionUIImage.swift in Sources */,
 				626F3721239F030A00E01AD0 /* endPoint.swift in Sources */,
 				62AE7517239EFFAB00CF710C /* SceneDelegate.swift in Sources */,
+				62AFABF6239F1F56008D02CA /* customLayout.swift in Sources */,
 				62AE751F239EFFAB00CF710C /* exercise2Kavak.xcdatamodeld in Sources */,
 				626F371C239F01B100E01AD0 /* gnome.swift in Sources */,
+				62BA7BD8239F5D0900B9188A /* gnomeCollectionViewCell.swift in Sources */,
 				626F3726239F03F900E01AD0 /* extensionDictionary.swift in Sources */,
+				6260354F239F244D006A6CAA /* allGnomesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
