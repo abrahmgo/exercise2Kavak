@@ -8,12 +8,13 @@
 
 import UIKit
 
-class detailGnomeViewController: UIViewController {
+class detailGnomeViewController: UIViewController, segmentControlDelegate {
 
     @IBOutlet weak var showImage: UIImageView!
     @IBOutlet weak var showTitle: UILabel!
     @IBOutlet weak var favoriteGnome: UIButton!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var selector: segmentControl!
     
     var viewModel = infoGnomeViewModel()
     var infoGnome : gnome?
@@ -27,8 +28,12 @@ class detailGnomeViewController: UIViewController {
     
     func initView()
     {
+        navigationController?.navigationBar.isTranslucent = true
         showImage.image = imageGnome
         showTitle.text = infoGnome?.name
+        selector.delegate = self
+        selector.backgroundColor = UIColor(hexString: "#7A8E8F")
+        selector.setButtonTitles(buttonTitles: ["Profile","Friends","Jobs"])
         let imageFavorite = viewModel.isFavoriteGnome(entityName: "GnomeEntity", infoGnome: infoGnome!)
         let nameImage = imageFavorite == true ? "favorite" : "nonFavorite"
         favoriteGnome.setBackgroundImage(UIImage(named: nameImage), for: .normal)
@@ -36,6 +41,10 @@ class detailGnomeViewController: UIViewController {
         setupView(index:0)
     }
 
+    func changeToIndex(index: Int) {
+        setupView(index: index)
+    }
+    
     @IBAction func favoriteGnomeAction(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         let message = viewModel.statusFavoriteGnome(status: sender.isSelected, entityName: "GnomeEntity", infoGnome: infoGnome!)

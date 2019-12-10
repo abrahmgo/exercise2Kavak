@@ -22,6 +22,9 @@
 		6241616D239F71F800602353 /* infoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6241616C239F71F800602353 /* infoTableViewController.swift */; };
 		6241616F239F72A100602353 /* friendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6241616E239F72A100602353 /* friendsViewModel.swift */; };
 		62416171239F740100602353 /* infoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62416170239F740100602353 /* infoViewModel.swift */; };
+		62478444239FF169000D2562 /* segmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62478443239FF169000D2562 /* segmentControl.swift */; };
+		62478446239FF193000D2562 /* extensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62478445239FF193000D2562 /* extensionUIColor.swift */; };
+		62478449239FFEE5000D2562 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62478448239FFEE5000D2562 /* mainViewController.swift */; };
 		6260354F239F244D006A6CAA /* allGnomesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6260354E239F244D006A6CAA /* allGnomesViewController.swift */; };
 		62603551239F2B3B006A6CAA /* extensionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62603550239F2B3B006A6CAA /* extensionUIImage.swift */; };
 		626F371C239F01B100E01AD0 /* gnome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626F371B239F01B100E01AD0 /* gnome.swift */; };
@@ -74,6 +77,9 @@
 		6241616C239F71F800602353 /* infoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoTableViewController.swift; sourceTree = "<group>"; };
 		6241616E239F72A100602353 /* friendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendsViewModel.swift; sourceTree = "<group>"; };
 		62416170239F740100602353 /* infoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoViewModel.swift; sourceTree = "<group>"; };
+		62478443239FF169000D2562 /* segmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = segmentControl.swift; sourceTree = "<group>"; };
+		62478445239FF193000D2562 /* extensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionUIColor.swift; sourceTree = "<group>"; };
+		62478448239FFEE5000D2562 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		6260354E239F244D006A6CAA /* allGnomesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allGnomesViewController.swift; sourceTree = "<group>"; };
 		62603550239F2B3B006A6CAA /* extensionUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionUIImage.swift; sourceTree = "<group>"; };
 		626F371B239F01B100E01AD0 /* gnome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gnome.swift; sourceTree = "<group>"; };
@@ -196,6 +202,22 @@
 			path = info;
 			sourceTree = "<group>";
 		};
+		62478442239FF158000D2562 /* segmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				62478443239FF169000D2562 /* segmentControl.swift */,
+			);
+			path = segmentControl;
+			sourceTree = "<group>";
+		};
+		62478447239FFED8000D2562 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				62478448239FFEE5000D2562 /* mainViewController.swift */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
 		626F371A239F019F00E01AD0 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +251,7 @@
 				626F3725239F03F900E01AD0 /* extensionDictionary.swift */,
 				62603550239F2B3B006A6CAA /* extensionUIImage.swift */,
 				6241615B239F681D00602353 /* extensionUIVIewController.swift */,
+				62478445239FF193000D2562 /* extensionUIColor.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -248,6 +271,8 @@
 		626F372A239F078400E01AD0 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				62478447239FFED8000D2562 /* main */,
+				62478442239FF158000D2562 /* segmentControl */,
 				6241614C239F601C00602353 /* detailGnome */,
 				62AFABF4239F1F3A008D02CA /* allGnomes */,
 				62AE751A239EFFAB00CF710C /* Main.storyboard */,
@@ -457,6 +482,7 @@
 				626F3729239F04F500E01AD0 /* gnomeViewModel.swift in Sources */,
 				62603551239F2B3B006A6CAA /* extensionUIImage.swift in Sources */,
 				6241615F239F6BE000602353 /* professionsTableViewController.swift in Sources */,
+				62478446239FF193000D2562 /* extensionUIColor.swift in Sources */,
 				6241615C239F681D00602353 /* extensionUIVIewController.swift in Sources */,
 				62416154239F62EC00602353 /* GnomeEntity+CoreDataProperties.swift in Sources */,
 				6241616D239F71F800602353 /* infoTableViewController.swift in Sources */,
@@ -466,6 +492,8 @@
 				62416163239F6F1800602353 /* professionTableViewCell.swift in Sources */,
 				62416159239F63EE00602353 /* infoGnomeViewModel.swift in Sources */,
 				62416153239F62EC00602353 /* GnomeEntity+CoreDataClass.swift in Sources */,
+				62478444239FF169000D2562 /* segmentControl.swift in Sources */,
+				62478449239FFEE5000D2562 /* mainViewController.swift in Sources */,
 				626F3721239F030A00E01AD0 /* endPoint.swift in Sources */,
 				62AE7517239EFFAB00CF710C /* SceneDelegate.swift in Sources */,
 				62416167239F71D600602353 /* friendsTableViewController.swift in Sources */,

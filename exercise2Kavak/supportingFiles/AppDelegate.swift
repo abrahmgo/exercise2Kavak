@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        customNavigationBar()
         // Override point for customization after application launch.
         return true
     }
@@ -77,6 +78,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func customNavigationBar()
+    {
+        //UINavigationBar.appearance().barStyle = .blackOpaque
+        UINavigationBar.appearance().tintColor = .black
+        UINavigationBar.appearance().barTintColor = .white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.black]
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().backIndicatorImage = UIImage(named: "back")?.withRenderingMode(.alwaysOriginal)
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "back")?.withRenderingMode(.alwaysOriginal)
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -280, vertical: 10), for: .default)
+    }
+
 
 }
 

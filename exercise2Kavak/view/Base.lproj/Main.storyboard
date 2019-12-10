@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="but-cS-Jy8">
             <objects>
-                <viewController id="hsn-lu-gKo" sceneMemberID="viewController">
+                <viewController id="hsn-lu-gKo" customClass="mainViewController" customModule="exercise2Kavak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nbe-Tr-GOa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="104-9k-bN8" kind="show" id="9kT-Rb-u8J"/>
+                                    <action selector="allGnome:" destination="hsn-lu-gKo" eventType="touchUpInside" id="tO2-UP-qVl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -37,15 +37,14 @@
         <!--All Gnomes View Controller-->
         <scene sceneID="OIh-hH-f2V">
             <objects>
-                <viewController id="104-9k-bN8" customClass="allGnomesViewController" customModule="exercise2Kavak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="allGnome" id="104-9k-bN8" customClass="allGnomesViewController" customModule="exercise2Kavak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xt9-W3-jwv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="c6Q-Zl-0zP">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="c6Q-Zl-0zP">
                                 <rect key="frame" x="23" y="57" width="329" height="610"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewLayout key="collectionViewLayout" id="A8J-4D-VKs" customClass="customLayout" customModule="exercise2Kavak" customModuleProvider="target"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="ZdT-MX-BsK" customClass="gnomeCollectionViewCell" customModule="exercise2Kavak" customModuleProvider="target">
@@ -55,20 +54,27 @@
                                             <rect key="frame" x="0.0" y="0.0" width="131" height="207"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GQP-J7-tBY">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GQP-J7-tBY">
                                                     <rect key="frame" x="8" y="43" width="115" height="155"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VH1-Ha-tuI">
-                                                    <rect key="frame" x="44" y="14" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VH1-Ha-tuI">
+                                                    <rect key="frame" x="8" y="14" width="115" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VH1-Ha-tuI" firstAttribute="leading" secondItem="k50-wc-okL" secondAttribute="leading" constant="8" id="2rd-HP-o8D"/>
+                                                <constraint firstItem="GQP-J7-tBY" firstAttribute="leading" secondItem="k50-wc-okL" secondAttribute="leadingMargin" id="6cl-af-rea"/>
+                                                <constraint firstItem="VH1-Ha-tuI" firstAttribute="centerX" secondItem="GQP-J7-tBY" secondAttribute="centerX" id="NHf-Jr-TBb"/>
+                                                <constraint firstItem="GQP-J7-tBY" firstAttribute="top" secondItem="VH1-Ha-tuI" secondAttribute="bottom" constant="8" id="QNR-Ni-3hy"/>
+                                                <constraint firstItem="VH1-Ha-tuI" firstAttribute="top" secondItem="k50-wc-okL" secondAttribute="top" constant="14" id="XvF-I4-jgf"/>
+                                                <constraint firstAttribute="bottom" secondItem="GQP-J7-tBY" secondAttribute="bottom" constant="9" id="dRS-rg-PlH"/>
+                                                <constraint firstItem="GQP-J7-tBY" firstAttribute="trailing" secondItem="k50-wc-okL" secondAttribute="trailingMargin" id="rwg-qW-ps9"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="customSize" width="131" height="207"/>
                                         <connections>
                                             <outlet property="showImage" destination="GQP-J7-tBY" id="gLe-8h-ca9"/>
@@ -77,18 +83,35 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nfR-E7-BEs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="v3C-RJ-iFI"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nfR-E7-BEs" firstAttribute="centerX" secondItem="c6Q-Zl-0zP" secondAttribute="centerX" id="7z7-ZI-sXt"/>
+                            <constraint firstItem="c6Q-Zl-0zP" firstAttribute="bottom" secondItem="ijE-b4-6mx" secondAttribute="bottom" id="DyS-1i-YOi"/>
+                            <constraint firstItem="nfR-E7-BEs" firstAttribute="centerX" secondItem="Xt9-W3-jwv" secondAttribute="centerX" id="H2F-gf-Usy"/>
+                            <constraint firstItem="c6Q-Zl-0zP" firstAttribute="leading" secondItem="ijE-b4-6mx" secondAttribute="leading" constant="23" id="Iwk-AW-7jo"/>
+                            <constraint firstItem="nfR-E7-BEs" firstAttribute="top" secondItem="ijE-b4-6mx" secondAttribute="top" id="ZxX-Zu-lTv"/>
+                            <constraint firstItem="c6Q-Zl-0zP" firstAttribute="top" secondItem="nfR-E7-BEs" secondAttribute="bottom" constant="13" id="ocY-Ef-kik"/>
+                            <constraint firstItem="nfR-E7-BEs" firstAttribute="leading" secondItem="ijE-b4-6mx" secondAttribute="leading" id="ojG-hC-Ymb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ijE-b4-6mx"/>
                     </view>
                     <navigationItem key="navigationItem" id="AiH-SL-pQd"/>
                     <connections>
                         <outlet property="collectionVIew" destination="c6Q-Zl-0zP" id="hhr-6t-JmJ"/>
+                        <outlet property="searchBar" destination="nfR-E7-BEs" id="ocL-dm-7lo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XXb-TO-2ld" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="834" y="-7"/>
+            <point key="canvasLocation" x="832.79999999999995" y="-7.6461769115442282"/>
         </scene>
         <!--Detail Gnome View Controller-->
         <scene sceneID="n6g-ly-h7m">
@@ -122,6 +145,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oAU-ar-ESx" customClass="segmentControl" customModule="exercise2Kavak" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="373" width="375" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="FeG-xp-7tA"/>
@@ -129,6 +157,7 @@
                     <connections>
                         <outlet property="containerView" destination="OsQ-pp-yez" id="0gZ-9d-HvY"/>
                         <outlet property="favoriteGnome" destination="SlG-Pp-mzw" id="Dv9-yW-aOr"/>
+                        <outlet property="selector" destination="oAU-ar-ESx" id="rzA-uB-OnA"/>
                         <outlet property="showImage" destination="MVB-Ax-qwg" id="aZr-nY-AFE"/>
                         <outlet property="showTitle" destination="ZA8-nA-asc" id="vzi-6D-bzi"/>
                     </connections>

@@ -13,6 +13,7 @@ class gnomeViewModel {
     
     var apiManager = apiHandler()
     var dataSourceGnome = [gnome]()
+    var dataSourceGnomeSeachBar = [gnome]()
     var dataSourceGnomeImages : [String:UIImage]?
     
     func getDataFromApi(withUrl: String, completion: @escaping (([String:Any]) -> Void))
@@ -49,15 +50,30 @@ class gnomeViewModel {
     }
     
     
-    func getNumCellInSection() -> Int
+    func getNumCellInSection(filter: Bool) -> Int
     {
-        return dataSourceGnome.count
+        if filter
+        {
+            return dataSourceGnomeSeachBar.count
+        }
+        else
+        {
+            return dataSourceGnome.count
+        }
     }
     
-    func getGnomeAtIndex(index: Int) -> gnome
+    func getGnomeAtIndex(filter: Bool, index: Int) -> gnome
     {
-        let gnomeIndex =  dataSourceGnome[index]
-        return gnomeIndex
+        if filter
+        {
+            let gnomeIndex =  dataSourceGnomeSeachBar[index]
+            return gnomeIndex
+        }
+        else
+        {
+            let gnomeIndex =  dataSourceGnome[index]
+            return gnomeIndex
+        }
     }
     
     func getGnomeImageAtIndex(url: String) -> UIImage?
@@ -118,4 +134,14 @@ class gnomeViewModel {
         let reduceImages = Array(Set(images))
         return reduceImages
     }
+    
+    func getDataSearchBar(searchText: String, completion: @escaping ((Bool) -> Void))
+    {
+        dataSourceGnomeSeachBar = dataSourceGnome.filter({ (flinkerFiltered) -> Bool in
+            return (flinkerFiltered.name!.lowercased().contains(searchText.lowercased()))
+        })
+        completion(true)
+    }
+    
+
 }
