@@ -12,9 +12,9 @@ class apiHandler {
     
     let session = URLSession.shared
     
-    func downloadData(completion: @escaping ((Int,[String:Any]) -> Void))
+    func downloadData(url: String, completion: @escaping ((Int,[String:Any]) -> Void))
     {
-        guard let requestUrl = URL(string:endPoint.server) else { return }
+        guard let requestUrl = URL(string:url) else { return }
         let request = URLRequest(url:requestUrl)
         let task = session.dataTask(with: request) {
             (data, response, error) in
