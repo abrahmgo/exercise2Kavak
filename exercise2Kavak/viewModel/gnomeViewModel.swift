@@ -13,6 +13,7 @@ class gnomeViewModel {
     
     var apiManager = apiHandler()
     var dataSourceGnome = [gnome]()
+    var dataSourceGnomeFilter = [gnome]()
     var dataSourceGnomeSeachBar = [gnome]()
     var dataSourceGnomeImages : [String:UIImage]?
     
@@ -50,29 +51,59 @@ class gnomeViewModel {
     }
     
     
-    func getNumCellInSection(filter: Bool) -> Int
+    func getNumCellInSection(enableFilter: Bool, filter: Bool) -> Int
     {
-        if filter
+        if enableFilter
         {
-            return dataSourceGnomeSeachBar.count
+            if filter
+            {
+                return dataSourceGnomeSeachBar.count
+            }
+            else
+            {
+                return dataSourceGnomeFilter.count
+            }
         }
         else
         {
-            return dataSourceGnome.count
+            if filter
+            {
+                return dataSourceGnomeSeachBar.count
+            }
+            else
+            {
+                return dataSourceGnome.count
+            }
         }
     }
     
-    func getGnomeAtIndex(filter: Bool, index: Int) -> gnome
+    func getGnomeAtIndex(enableFilter: Bool, filter: Bool, index: Int) -> gnome
     {
-        if filter
+        if enableFilter
         {
-            let gnomeIndex =  dataSourceGnomeSeachBar[index]
-            return gnomeIndex
+            if filter
+            {
+                let gnomeIndex =  dataSourceGnomeSeachBar[index]
+                return gnomeIndex
+            }
+            else
+            {
+                let gnomeIndex =  dataSourceGnomeFilter[index]
+                return gnomeIndex
+            }
         }
         else
         {
-            let gnomeIndex =  dataSourceGnome[index]
-            return gnomeIndex
+            if filter
+            {
+                let gnomeIndex =  dataSourceGnomeSeachBar[index]
+                return gnomeIndex
+            }
+            else
+            {
+                let gnomeIndex =  dataSourceGnome[index]
+                return gnomeIndex
+            }
         }
     }
     
@@ -104,28 +135,40 @@ class gnomeViewModel {
         return reduceProfesion
     }
     
-    func getMaxHeight() -> Double
+    func getMaxWeight() -> Double
     {
         let weight = self.dataSourceGnome.map { $0.weight! }
         return weight.max()!
     }
     
-    func getMinHeight() -> Double
+    func getMinWeight() -> Double
     {
         let weight = self.dataSourceGnome.map { $0.weight! }
         return weight.min()!
     }
     
-    func getMaxAge() -> Int
+    func getMaxHeight() -> Double
     {
-        let age = self.dataSourceGnome.map { $0.age! }
-        return age.max()!
+        let weight = self.dataSourceGnome.map { $0.height! }
+        return weight.max()!
     }
     
-    func getMinAge() -> Int
+    func getMinHeight() -> Double
+    {
+        let weight = self.dataSourceGnome.map { $0.height! }
+        return weight.min()!
+    }
+    
+    func getMaxAge() -> Double
     {
         let age = self.dataSourceGnome.map { $0.age! }
-        return age.min()!
+        return Double(age.max()!)
+    }
+    
+    func getMinAge() -> Double
+    {
+        let age = self.dataSourceGnome.map { $0.age! }
+        return Double(age.min()!)
     }
     
     func getUniqueImages() -> [String]
@@ -135,12 +178,126 @@ class gnomeViewModel {
         return reduceImages
     }
     
-    func getDataSearchBar(searchText: String, completion: @escaping ((Bool) -> Void))
+    func getDataSearchBar(enableFilter: Bool,searchText: String, completion: @escaping ((Bool) -> Void))
     {
-        dataSourceGnomeSeachBar = dataSourceGnome.filter({ (flinkerFiltered) -> Bool in
-            return (flinkerFiltered.name!.lowercased().contains(searchText.lowercased()))
-        })
+        if enableFilter
+        {
+            dataSourceGnomeSeachBar = dataSourceGnome.filter({ (flinkerFiltered) -> Bool in
+                return (flinkerFiltered.name!.lowercased().contains(searchText.lowercased()))
+            })
+        }
+        else
+        {
+            dataSourceGnomeSeachBar = dataSourceGnomeFilter.filter({ (flinkerFiltered) -> Bool in
+                return (flinkerFiltered.name!.lowercased().contains(searchText.lowercased()))
+            })
+        }
         completion(true)
+    }
+    
+    func getDataFilter(filters: [String:Any], completion: @escaping ((Bool) -> Void))
+    {
+        if filters.count != 0
+        {
+            var flag = false
+            for (key,value) in filters{
+                if key == "hairColor"
+                {
+                    let hair = value as! String
+                    if flag
+                    {
+                        self.dataSourceGnomeFilter = dataSourceGnomeFilter.filter({ (gnome) -> Bool in
+                            gnome.hairColor == hair
+                        })
+                    }
+                    else
+                    {
+                        self.dataSourceGnomeFilter = dataSourceGnome.filter({ (gnome) -> Bool in
+                            gnome.hairColor == hair
+                        })
+                    }
+                    flag = true
+                }
+                else if key == "profession"
+                {
+                    let profession = value as! String
+                    if flag
+                    {
+                        self.dataSourceGnomeFilter = dataSourceGnomeFilter.filter({ (gnome) -> Bool in
+                            gnome.professions!.contains(profession)
+                        })
+                    }
+                    else
+                    {
+                        self.dataSourceGnomeFilter = dataSourceGnome.filter({ (gnome) -> Bool in
+                            gnome.professions!.contains(profession)
+                        })
+                    }
+                    flag = true
+                }
+                else if key == "age"
+                {
+                    let age = value as! Int
+                    if flag
+                    {
+                        self.dataSourceGnomeFilter = dataSourceGnomeFilter.filter({ (gnome) -> Bool in
+                            gnome.age! <= age
+                        })
+                    }
+                    else
+                    {
+                        self.dataSourceGnomeFilter = dataSourceGnome.filter({ (gnome) -> Bool in
+                            gnome.age! <= age
+                        })
+                    }
+                    flag = true
+                }
+                
+                else if key == "weight"
+                {
+                    let weight = value as! Float
+                    if flag
+                    {
+                        self.dataSourceGnomeFilter = dataSourceGnomeFilter.filter({ (gnome) -> Bool in
+                            gnome.weight! <= Double(weight)
+                        })
+                    }
+                    else
+                    {
+                        self.dataSourceGnomeFilter = dataSourceGnome.filter({ (gnome) -> Bool in
+                            gnome.weight! <= Double(weight)
+                        })
+                    }
+                    flag = true
+                }
+                else if key == "height"
+                {
+                    let height = value as! Float
+                    if flag
+                    {
+                        self.dataSourceGnomeFilter = dataSourceGnomeFilter.filter({ (gnome) -> Bool in
+                            gnome.height! <= Double(height)
+                        })
+                    }
+                    else
+                    {
+                        self.dataSourceGnomeFilter = dataSourceGnome.filter({ (gnome) -> Bool in
+                            gnome.height! <= Double(height)
+                        })
+                    }
+                    flag = true
+                }
+            }
+        }
+        
+        if dataSourceGnomeFilter.count != 0
+        {
+            completion(true)
+        }
+        else
+        {
+            completion(false)
+        }
     }
     
 
