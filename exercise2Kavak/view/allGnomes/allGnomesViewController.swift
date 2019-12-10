@@ -61,7 +61,10 @@ class allGnomesViewController: UIViewController,  UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let gnomeIndex = viewModel.getGnomeAtIndex(index: indexPath.row)
         let image = viewModel.getGnomeImageAtIndex(url: gnomeIndex.thumbnail!)
-        
+        let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "detailGnome") as! detailGnomeViewController
+        VC1.imageGnome = image
+        VC1.infoGnome = gnomeIndex
+        self.navigationController?.pushViewController(VC1, animated: true)
     }
 
 }

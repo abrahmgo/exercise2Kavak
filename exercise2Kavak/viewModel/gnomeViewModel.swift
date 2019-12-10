@@ -29,7 +29,6 @@ class gnomeViewModel {
             {
                 self.apiManager.cleanGnomes(data: info) { (info) in
                     self.dataSourceGnome = info
-                    self.getUniqueImages()
                     completion(true)
                 }
             }
