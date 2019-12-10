@@ -17,6 +17,7 @@ class allGnomesViewController: UIViewController,  UICollectionViewDataSource, UI
     var viewModel = gnomeViewModel()
     var searchActive : Bool = false
     var enableFilter  = false
+    var useFlag = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,12 +40,26 @@ class allGnomesViewController: UIViewController,  UICollectionViewDataSource, UI
         if let layout = collectionVIew?.collectionViewLayout as? customLayout {
             layout.delegate = self
         }
-        viewModel.downloadGnomes(withUrl: endPoint.server) { (_) in
-            DispatchQueue.main.async {
-                self.initValuesFilter()
-                self.downLoadImages()
-                self.collectionVIew.reloadData()
+        utilActivityIndicator.shared.showLoader(view: self.view)
+        viewModel.downloadGnomes(useFlag: useFlag, withUrl: endPoint.server) { (status) in
+            if status
+            {
+                DispatchQueue.main.async {
+                    utilActivityIndicator.shared.hideLoader(view: self.view)
+                    self.initValuesFilter()
+                    self.downLoadImages()
+                    self.collectionVIew.reloadData()
+                }
             }
+            else
+            {
+                DispatchQueue.main.async {
+                    self.showAlertMessageCompletion(titleStr: "Gnome", messageStr: "the town is abandoned") { (_) in
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                }
+            }
+            
         }
     }
     

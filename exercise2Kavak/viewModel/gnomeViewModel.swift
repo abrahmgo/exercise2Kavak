@@ -11,6 +11,9 @@ import UIKit
 
 class gnomeViewModel {
     
+    private let context = coreDataManager.shared.persistentContainer.viewContext
+    private var localArrGnomes = [GnomeEntity]()
+    
     var apiManager = apiHandler()
     var dataSourceGnome = [gnome]()
     var dataSourceGnomeFilter = [gnome]()
@@ -24,20 +27,56 @@ class gnomeViewModel {
         }
     }
     
-    func downloadGnomes(withUrl: String, completion: @escaping ((Bool) -> Void))
+    func downloadGnomes(useFlag: Int, withUrl: String, completion: @escaping ((Bool) -> Void))
     {
-        getDataFromApi(withUrl: withUrl) { (data) in
-            if let info = data["Brastlewark"] as? [[String:Any]]
-            {
-                self.apiManager.cleanGnomes(data: info) { (info) in
-                    self.dataSourceGnome = info
-                    completion(true)
+        if useFlag == 1
+        {
+            getDataFromApi(withUrl: withUrl) { (data) in
+                if let info = data["Brastlewark"] as? [[String:Any]]
+                {
+                    self.apiManager.cleanGnomes(data: info) { (info) in
+                        self.dataSourceGnome = info
+                        completion(true)
+                    }
                 }
+                else
+                {
+                    self.dataSourceGnome.removeAll()
+                    completion(false)
+                }
+            }
+        }
+        else
+        {
+            checkLocalData { (status) in
+                completion(status)
+            }
+        }
+    }
+    
+    func checkLocalData(completion: @escaping ((Bool) -> Void))
+    {
+        dataSourceGnome.removeAll()
+        do{
+            localArrGnomes = try context.fetch(GnomeEntity.fetchRequest())
+            if localArrGnomes.count != 0
+            {
+                for data in localArrGnomes
+                {
+                    if let arrayFriends = data.friends as! NSArray as? [String], let arrayProfessions = data.professions as! NSArray as? [String]
+                    {
+                        let gnomeLocal = gnome(id: Int(data.id), name: data.name!, thumbnail: data.thumbnail!, age: Int(data.age), weight: data.weight, height: data.height, professions: arrayProfessions, friends: arrayFriends, hairColor: data.hairColor!)
+                        self.dataSourceGnome.append(gnomeLocal)
+                    }
+                }
+                completion(true)
             }
             else
             {
-                self.dataSourceGnome.removeAll()
+                completion(false)
             }
+        }catch _ as NSError{
+            completion(false)
         }
     }
     
@@ -289,7 +328,10 @@ class gnomeViewModel {
                 }
             }
         }
-        
+        else
+        {
+            dataSourceGnomeFilter.removeAll()
+        }
         if dataSourceGnomeFilter.count != 0
         {
             completion(true)

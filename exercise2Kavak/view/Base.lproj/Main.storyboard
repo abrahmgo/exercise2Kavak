@@ -17,11 +17,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7o-Ec-MOd">
-                                <rect key="frame" x="164" y="170" width="46" height="30"/>
+                                <rect key="frame" x="160" y="170" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Citizens"/>
                                 <connections>
                                     <action selector="allGnome:" destination="hsn-lu-gKo" eventType="touchUpInside" id="tO2-UP-qVl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFu-iy-kyh">
+                                <rect key="frame" x="156" y="241" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Favorites"/>
+                                <connections>
+                                    <action selector="favoriteGnome:" destination="hsn-lu-gKo" eventType="touchUpInside" id="jGi-7a-X0Q"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -44,7 +52,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="c6Q-Zl-0zP">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewLayout key="collectionViewLayout" id="A8J-4D-VKs" customClass="customLayout" customModule="exercise2Kavak" customModuleProvider="target"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="ZdT-MX-BsK" customClass="gnomeCollectionViewCell" customModule="exercise2Kavak" customModuleProvider="target">
@@ -74,7 +82,7 @@
                                                 <constraint firstItem="VH1-Ha-tuI" firstAttribute="top" secondItem="k50-wc-okL" secondAttribute="top" constant="14" id="zOn-9D-sgY"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="customSize" width="131" height="207"/>
                                         <connections>
                                             <outlet property="showImage" destination="GQP-J7-tBY" id="gLe-8h-ca9"/>

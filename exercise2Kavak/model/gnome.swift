@@ -8,7 +8,7 @@
 
 import Foundation
 
-class gnome: Codable {
+struct gnome: Codable {
     var id  : Int?
     var name : String?
     var thumbnail : String?

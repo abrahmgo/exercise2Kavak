@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -46,6 +46,8 @@
 		62AE753A239EFFAD00CF710C /* exercise2KavakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE7539239EFFAD00CF710C /* exercise2KavakUITests.swift */; };
 		62AFABF6239F1F56008D02CA /* customLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AFABF5239F1F56008D02CA /* customLayout.swift */; };
 		62BA7BD8239F5D0900B9188A /* gnomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA7BD7239F5D0900B9188A /* gnomeCollectionViewCell.swift */; };
+		62E434DA23A059040028EA89 /* utilActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E434D823A059040028EA89 /* utilActivityIndicator.swift */; };
+		62E434DB23A059040028EA89 /* activityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E434D923A059040028EA89 /* activityIndicator.swift */; };
 		B1B606EDA38C9CA500C3A806 /* Pods_exercise2KavakTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D52EFC6F1B6D27C05625C6 /* Pods_exercise2KavakTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +114,8 @@
 		62AE753B239EFFAD00CF710C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62AFABF5239F1F56008D02CA /* customLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customLayout.swift; sourceTree = "<group>"; };
 		62BA7BD7239F5D0900B9188A /* gnomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gnomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		62E434D823A059040028EA89 /* utilActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utilActivityIndicator.swift; sourceTree = "<group>"; };
+		62E434D923A059040028EA89 /* activityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = activityIndicator.swift; sourceTree = "<group>"; };
 		8C6119E0D8259F8F2842190A /* Pods_exercise2KavakUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_exercise2KavakUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E133FC8FE77F91B34EF297E /* Pods-exercise2KavakTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-exercise2KavakTests.debug.xcconfig"; path = "Target Support Files/Pods-exercise2KavakTests/Pods-exercise2KavakTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C2D52EFC6F1B6D27C05625C6 /* Pods_exercise2KavakTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_exercise2KavakTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -309,6 +313,7 @@
 		626F372A239F078400E01AD0 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				62E434D723A058E80028EA89 /* activityIndicator */,
 				6217490B23A00C2A00F1C1E5 /* customFilter */,
 				62478447239FFED8000D2562 /* main */,
 				62478442239FF158000D2562 /* segmentControl */,
@@ -386,6 +391,15 @@
 			path = allGnomes;
 			sourceTree = "<group>";
 		};
+		62E434D723A058E80028EA89 /* activityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				62E434D923A059040028EA89 /* activityIndicator.swift */,
+				62E434D823A059040028EA89 /* utilActivityIndicator.swift */,
+			);
+			path = activityIndicator;
+			sourceTree = "<group>";
+		};
 		E505543D78B510113935FEE7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -396,7 +410,6 @@
 				FFDDCC63D07305EF7A35611C /* Pods-exercise2KavakUITests.debug.xcconfig */,
 				FC9A3ECE30BA446492515F34 /* Pods-exercise2KavakUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -651,7 +664,9 @@
 				626F371C239F01B100E01AD0 /* gnome.swift in Sources */,
 				62BA7BD8239F5D0900B9188A /* gnomeCollectionViewCell.swift in Sources */,
 				626F3726239F03F900E01AD0 /* extensionDictionary.swift in Sources */,
+				62E434DB23A059040028EA89 /* activityIndicator.swift in Sources */,
 				62416157239F631C00602353 /* coreDataManager.swift in Sources */,
+				62E434DA23A059040028EA89 /* utilActivityIndicator.swift in Sources */,
 				6260354F239F244D006A6CAA /* allGnomesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
