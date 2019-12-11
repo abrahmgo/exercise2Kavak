@@ -160,6 +160,15 @@ class filter: UIView {
         switchHeight.isOn = false
         switchProfession.isOn = false
         
+        showAge.isHidden = true
+        valueAge.isHidden = true
+        showWeight.isHidden = true
+        valueWeight.isHidden = true
+        showHeight.isHidden = true
+        valueHeight.isHidden = true
+        hairDropDown.isHidden = true
+        professionDropDown.isHidden = true
+        
         delegate?.defaultFilter(true)
     }
     
@@ -167,12 +176,15 @@ class filter: UIView {
         valueAge.isUserInteractionEnabled = sender.isOn
         if !sender.isOn
         {
+            showAge.isHidden = true
+            valueAge.isHidden = true
             self.infoFilter["age"] = nil
         }
         else
         {
+            showAge.isHidden = false
+            valueAge.isHidden = false
             self.infoFilter["age"] = Int(valueAge.value)
-            print(infoFilter)
         }
     }
     
@@ -180,10 +192,14 @@ class filter: UIView {
         valueWeight.isUserInteractionEnabled = sender.isOn
         if !sender.isOn
         {
+            showWeight.isHidden = true
+            valueWeight.isHidden = true
             self.infoFilter["weight"] = nil
         }
         else
         {
+            valueWeight.isHidden = false
+            showWeight.isHidden = false
             self.infoFilter["weight"] = valueWeight.value
         }
     }
@@ -192,10 +208,14 @@ class filter: UIView {
         valueHeight.isUserInteractionEnabled = sender.isOn
         if !sender.isOn
         {
+            showHeight.isHidden = true
+            valueHeight.isHidden = true
             self.infoFilter["height"] = nil
         }
         else
         {
+            showHeight.isHidden = false
+            valueHeight.isHidden = false
             self.infoFilter["height"] = valueHeight.value
         }
     }
@@ -204,7 +224,12 @@ class filter: UIView {
         hairDropDown.isUserInteractionEnabled = sender.isOn
         if !sender.isOn
         {
+            hairDropDown.isHidden = true
             self.infoFilter["hairColor"] = nil
+        }
+        else
+        {
+            hairDropDown.isHidden = false
         }
     }
     
@@ -212,7 +237,12 @@ class filter: UIView {
         professionDropDown.isUserInteractionEnabled = sender.isOn
         if !sender.isOn
         {
+            professionDropDown.isHidden = true
             self.infoFilter["profession"] = nil
+        }
+        else
+        {
+            professionDropDown.isHidden = false
         }
     }
 }

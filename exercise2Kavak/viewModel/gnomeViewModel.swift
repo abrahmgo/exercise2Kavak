@@ -222,13 +222,13 @@ class gnomeViewModel {
     {
         if enableFilter
         {
-            dataSourceGnomeSeachBar = dataSourceGnome.filter({ (flinkerFiltered) -> Bool in
+            dataSourceGnomeSeachBar = dataSourceGnomeFilter.filter({ (flinkerFiltered) -> Bool in
                 return (flinkerFiltered.name!.lowercased().contains(searchText.lowercased()))
             })
         }
         else
         {
-            dataSourceGnomeSeachBar = dataSourceGnomeFilter.filter({ (flinkerFiltered) -> Bool in
+            dataSourceGnomeSeachBar = dataSourceGnome.filter({ (flinkerFiltered) -> Bool in
                 return (flinkerFiltered.name!.lowercased().contains(searchText.lowercased()))
             })
         }
@@ -292,7 +292,7 @@ class gnomeViewModel {
                     }
                     flag = true
                 }
-                
+                    
                 else if key == "weight"
                 {
                     let weight = value as! Float
