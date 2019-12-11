@@ -8,7 +8,7 @@
 
 import UIKit
 
-class allGnomesViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate, dataFiler {
+class allGnomesViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate, dataFiler, updateViewFavorites {
         
     @IBOutlet weak var filterView: filter!
     @IBOutlet weak var filterButton: UIButton!
@@ -34,33 +34,17 @@ class allGnomesViewController: UIViewController,  UICollectionViewDataSource, UI
     
     func initView()
     {
+        if useFlag == 0
+        {
+            infoGnomeViewModel.shared.delegate = self
+        }
         filterView.alpha = 0
         filterView.delegate = self
         searchBar.delegate = self
         if let layout = collectionVIew?.collectionViewLayout as? customLayout {
             layout.delegate = self
         }
-        utilActivityIndicator.shared.showLoader(view: self.view)
-        viewModel.downloadGnomes(useFlag: useFlag, withUrl: endPoint.server) { (status) in
-            if status
-            {
-                DispatchQueue.main.async {
-                    utilActivityIndicator.shared.hideLoader(view: self.view)
-                    self.initValuesFilter()
-                    self.downLoadImages()
-                    self.collectionVIew.reloadData()
-                }
-            }
-            else
-            {
-                DispatchQueue.main.async {
-                    self.showAlertMessageCompletion(titleStr: "Gnome", messageStr: "the town is abandoned") { (_) in
-                        self.navigationController?.popViewController(animated: true)
-                    }
-                }
-            }
-            
-        }
+        downloadData()
     }
     
     @IBAction func showFilter(_ sender: UIButton) {
@@ -73,6 +57,31 @@ class allGnomesViewController: UIViewController,  UICollectionViewDataSource, UI
         {
             disappearFilter()
         }
+    }
+    
+    func downloadData()
+    {
+        utilActivityIndicator.shared.showLoader(view: self.view)
+               viewModel.downloadGnomes(useFlag: useFlag, withUrl: endPoint.server) { (status) in
+                   if status
+                   {
+                       DispatchQueue.main.async {
+                           utilActivityIndicator.shared.hideLoader(view: self.view)
+                           self.initValuesFilter()
+                           self.downLoadImages()
+                           self.collectionVIew.reloadData()
+                       }
+                   }
+                   else
+                   {
+                       DispatchQueue.main.async {
+                           self.showAlertMessageCompletion(titleStr: "Gnome", messageStr: "the town is abandoned") { (_) in
+                               self.navigationController?.popViewController(animated: true)
+                           }
+                       }
+                   }
+                   
+               }
     }
     
     func initValuesFilter()
@@ -113,6 +122,11 @@ class allGnomesViewController: UIViewController,  UICollectionViewDataSource, UI
             self.collectionVIew.backgroundColor = UIColor.black.withAlphaComponent(0)
             self.filterView.alpha = 0
         }
+    }
+    
+    func updateView(_ flag: Bool) {
+        print("update view")
+        downloadData()
     }
     
     func downLoadImages()
@@ -181,6 +195,7 @@ class allGnomesViewController: UIViewController,  UICollectionViewDataSource, UI
         let image = viewModel.getGnomeImageAtIndex(url: gnomeIndex.thumbnail!)
         let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "detailGnome") as! detailGnomeViewController
         VC1.imageGnome = image
+        VC1.useFlag = useFlag
         VC1.infoGnome = gnomeIndex
         self.navigationController?.pushViewController(VC1, animated: true)
     }

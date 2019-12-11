@@ -10,7 +10,9 @@ import Foundation
 
 class infoGnomeViewModel{
     
+    static let shared = infoGnomeViewModel()
     private let context = coreDataManager.shared.persistentContainer.viewContext
+    weak var delegate: updateViewFavorites?
     
     func saveGnome(infoGnome: gnome) -> String
     {
@@ -34,10 +36,14 @@ class infoGnomeViewModel{
         }
     }
     
-    func deleteGnome(entityName: String, infoGnome: gnome) -> String
+    func deleteGnome(useFlag: Int, entityName: String, infoGnome: gnome) -> String
     {
         if coreDataManager.shared.deleteRegister(entityName, id: String(infoGnome.id!))
         {
+            if useFlag == 0
+            {
+                delegate?.updateView(true)
+            }
             return "he doesn't want your friendship 🥶"
         }
         else
@@ -46,7 +52,7 @@ class infoGnomeViewModel{
         }
     }
     
-    func statusFavoriteGnome(status: Bool, entityName: String, infoGnome: gnome) -> String
+    func statusFavoriteGnome(useFlag: Int, status: Bool, entityName: String, infoGnome: gnome) -> String
     {
         if status
         {
@@ -55,7 +61,7 @@ class infoGnomeViewModel{
         }
         else
         {
-            let message = deleteGnome(entityName: entityName, infoGnome: infoGnome)
+            let message = deleteGnome(useFlag: useFlag, entityName: entityName, infoGnome: infoGnome)
             return message
         }
     }
@@ -75,4 +81,8 @@ class infoGnomeViewModel{
         }
         return false
     }
+}
+
+protocol updateViewFavorites: class {
+    func updateView(_ flag: Bool)
 }

@@ -69,6 +69,7 @@ class gnomeViewModel {
                         self.dataSourceGnome.append(gnomeLocal)
                     }
                 }
+                print(dataSourceGnome.count)
                 completion(true)
             }
             else

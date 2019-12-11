@@ -15,10 +15,10 @@ class detailGnomeViewController: UIViewController, segmentControlDelegate {
     @IBOutlet weak var favoriteGnome: UIButton!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var selector: segmentControl!
-    
-    var viewModel = infoGnomeViewModel()
+   
     var infoGnome : gnome?
     var imageGnome : UIImage?
+    var useFlag = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class detailGnomeViewController: UIViewController, segmentControlDelegate {
         selector.delegate = self
         selector.backgroundColor = UIColor(hexString: "#7A8E8F")
         selector.setButtonTitles(buttonTitles: ["Profile","Friends","Jobs"])
-        let imageFavorite = viewModel.isFavoriteGnome(entityName: "GnomeEntity", infoGnome: infoGnome!)
+        let imageFavorite = infoGnomeViewModel.shared.isFavoriteGnome(entityName: "GnomeEntity", infoGnome: infoGnome!)
         let nameImage = imageFavorite == true ? "favorite" : "nonFavorite"
         favoriteGnome.setBackgroundImage(UIImage(named: nameImage), for: .normal)
         favoriteGnome.isSelected = imageFavorite
@@ -47,8 +47,8 @@ class detailGnomeViewController: UIViewController, segmentControlDelegate {
     
     @IBAction func favoriteGnomeAction(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
-        let message = viewModel.statusFavoriteGnome(status: sender.isSelected, entityName: "GnomeEntity", infoGnome: infoGnome!)
-        let imageFavorite = viewModel.isFavoriteGnome(entityName: "GnomeEntity", infoGnome: infoGnome!)
+        let message = infoGnomeViewModel.shared.statusFavoriteGnome(useFlag: useFlag, status: sender.isSelected, entityName: "GnomeEntity", infoGnome: infoGnome!)
+        let imageFavorite = infoGnomeViewModel.shared.isFavoriteGnome(entityName: "GnomeEntity", infoGnome: infoGnome!)
         let nameImage = imageFavorite == true ? "favorite" : "nonFavorite"
         favoriteGnome.setBackgroundImage(UIImage(named: nameImage), for: .normal)
         self.showAlertMessage(titleStr:"Gnome", messageStr:message)
