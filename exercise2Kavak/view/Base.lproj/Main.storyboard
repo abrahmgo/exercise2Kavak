@@ -16,17 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7o-Ec-MOd">
-                                <rect key="frame" x="160" y="170" width="55" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7o-Ec-MOd" customClass="buttonStyle" customModule="exercise2Kavak" customModuleProvider="target">
+                                <rect key="frame" x="55" y="272" width="264" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="sWv-vM-DAT"/>
+                                </constraints>
                                 <state key="normal" title="Citizens"/>
                                 <connections>
                                     <action selector="allGnome:" destination="hsn-lu-gKo" eventType="touchUpInside" id="tO2-UP-qVl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFu-iy-kyh">
-                                <rect key="frame" x="156" y="241" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFu-iy-kyh" customClass="buttonStyle" customModule="exercise2Kavak" customModuleProvider="target">
+                                <rect key="frame" x="55" y="348" width="264" height="47"/>
                                 <state key="normal" title="Favorites"/>
                                 <connections>
                                     <action selector="favoriteGnome:" destination="hsn-lu-gKo" eventType="touchUpInside" id="jGi-7a-X0Q"/>
@@ -34,6 +35,15 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="W7o-Ec-MOd" firstAttribute="leading" secondItem="gFu-iy-kyh" secondAttribute="leading" id="3Fc-0j-f3x"/>
+                            <constraint firstItem="W7o-Ec-MOd" firstAttribute="top" secondItem="Nbe-Tr-GOa" secondAttribute="top" constant="272" id="Ihc-FN-52E"/>
+                            <constraint firstItem="W7o-Ec-MOd" firstAttribute="centerX" secondItem="Nbe-Tr-GOa" secondAttribute="centerX" id="OAE-no-Ryq"/>
+                            <constraint firstAttribute="bottom" secondItem="gFu-iy-kyh" secondAttribute="bottom" constant="272" id="bgt-TN-lMR"/>
+                            <constraint firstItem="W7o-Ec-MOd" firstAttribute="leading" secondItem="2SE-qL-dik" secondAttribute="leading" constant="55" id="iLQ-SU-Xd3"/>
+                            <constraint firstItem="gFu-iy-kyh" firstAttribute="top" secondItem="W7o-Ec-MOd" secondAttribute="bottom" constant="29" id="qm1-Pc-SCO"/>
+                            <constraint firstItem="W7o-Ec-MOd" firstAttribute="trailing" secondItem="gFu-iy-kyh" secondAttribute="trailing" id="tcb-8E-euc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2SE-qL-dik"/>
                     </view>
                     <navigationItem key="navigationItem" id="9iP-dg-21Z"/>
@@ -152,37 +162,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MVB-Ax-qwg">
-                                <rect key="frame" x="16" y="20" width="343" height="293"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZA8-nA-asc">
-                                <rect key="frame" x="16" y="323" width="278" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZA8-nA-asc">
+                                <rect key="frame" x="16" y="294" width="278" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="1ZC-QW-WJS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SlG-Pp-mzw">
-                                <rect key="frame" x="308" y="323" width="51" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SlG-Pp-mzw">
+                                <rect key="frame" x="308" y="294" width="51" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="moE-QN-REG"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="nonFavorite"/>
                                 <connections>
                                     <action selector="favoriteGnomeAction:" destination="mXq-5p-EcG" eventType="touchUpInside" id="kvv-oM-exE"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OsQ-pp-yez">
-                                <rect key="frame" x="0.0" y="436" width="375" height="231"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OsQ-pp-yez">
+                                <rect key="frame" x="0.0" y="414" width="375" height="253"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oAU-ar-ESx" customClass="segmentControl" customModule="exercise2Kavak" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="373" width="375" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oAU-ar-ESx" customClass="segmentControl" customModule="exercise2Kavak" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="348" width="375" height="62"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MVB-Ax-qwg">
+                                <rect key="frame" x="16" y="0.0" width="343" height="293"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="293" id="U2v-I3-ezR"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MVB-Ax-qwg" firstAttribute="centerX" secondItem="oAU-ar-ESx" secondAttribute="centerX" id="04i-Ai-2p9"/>
+                            <constraint firstItem="oAU-ar-ESx" firstAttribute="leading" secondItem="OsQ-pp-yez" secondAttribute="leading" id="2zN-ib-Zas"/>
+                            <constraint firstItem="MVB-Ax-qwg" firstAttribute="top" secondItem="FeG-xp-7tA" secondAttribute="top" id="5xv-6v-5j0"/>
+                            <constraint firstItem="ZA8-nA-asc" firstAttribute="bottom" secondItem="SlG-Pp-mzw" secondAttribute="bottom" id="B95-lQ-cs9"/>
+                            <constraint firstItem="oAU-ar-ESx" firstAttribute="leading" secondItem="FeG-xp-7tA" secondAttribute="leading" id="Bgn-sm-qt8"/>
+                            <constraint firstItem="MVB-Ax-qwg" firstAttribute="trailing" secondItem="SlG-Pp-mzw" secondAttribute="trailing" id="DdI-Hp-edR"/>
+                            <constraint firstItem="MVB-Ax-qwg" firstAttribute="leading" secondItem="jSz-gz-KSv" secondAttribute="leadingMargin" id="EOM-8I-y1w"/>
+                            <constraint firstItem="oAU-ar-ESx" firstAttribute="trailing" secondItem="OsQ-pp-yez" secondAttribute="trailing" id="HkN-hj-5ri"/>
+                            <constraint firstItem="SlG-Pp-mzw" firstAttribute="leading" secondItem="ZA8-nA-asc" secondAttribute="trailing" constant="14" id="LJy-73-FjA"/>
+                            <constraint firstItem="MVB-Ax-qwg" firstAttribute="trailing" secondItem="jSz-gz-KSv" secondAttribute="trailingMargin" id="Lcq-iC-0fu"/>
+                            <constraint firstItem="OsQ-pp-yez" firstAttribute="bottom" secondItem="FeG-xp-7tA" secondAttribute="bottom" id="SIW-Ka-Htm"/>
+                            <constraint firstItem="ZA8-nA-asc" firstAttribute="top" secondItem="SlG-Pp-mzw" secondAttribute="top" id="Vop-Gf-LYe"/>
+                            <constraint firstItem="oAU-ar-ESx" firstAttribute="top" secondItem="ZA8-nA-asc" secondAttribute="bottom" constant="3" id="hjT-EN-Nkb"/>
+                            <constraint firstItem="ZA8-nA-asc" firstAttribute="top" secondItem="MVB-Ax-qwg" secondAttribute="bottom" constant="1" id="iCm-yb-yTR"/>
+                            <constraint firstItem="OsQ-pp-yez" firstAttribute="top" secondItem="jSz-gz-KSv" secondAttribute="top" constant="414" id="lnR-me-y0U"/>
+                            <constraint firstItem="MVB-Ax-qwg" firstAttribute="leading" secondItem="ZA8-nA-asc" secondAttribute="leading" id="mUb-hH-L8f"/>
+                            <constraint firstItem="OsQ-pp-yez" firstAttribute="top" secondItem="oAU-ar-ESx" secondAttribute="bottom" constant="4" id="v88-Mn-Od0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FeG-xp-7tA"/>
                     </view>
                     <connections>
@@ -201,12 +234,12 @@
         <scene sceneID="c9d-j4-JBo">
             <objects>
                 <tableViewController storyboardIdentifier="professions" id="exS-mA-a0T" customClass="professionsTableViewController" customModule="exercise2Kavak" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mKA-EA-Ovk">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mKA-EA-Ovk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="62" id="WfR-At-K3j" customClass="professionTableViewCell" customModule="exercise2Kavak" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="62" id="WfR-At-K3j" customClass="professionTableViewCell" customModule="exercise2Kavak" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="62"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WfR-At-K3j" id="kGe-nX-ruk">
@@ -246,12 +279,12 @@
         <scene sceneID="ysi-am-reM">
             <objects>
                 <tableViewController storyboardIdentifier="friends" id="Nmv-fS-7vs" customClass="friendsTableViewController" customModule="exercise2Kavak" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="S4M-wE-wn7">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="S4M-wE-wn7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="62" id="xN6-PP-awS" customClass="friendsTableViewCell" customModule="exercise2Kavak" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="62" id="xN6-PP-awS" customClass="friendsTableViewCell" customModule="exercise2Kavak" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="62"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xN6-PP-awS" id="hlM-RU-iBx">
@@ -286,12 +319,12 @@
         <scene sceneID="RjR-jS-Gpq">
             <objects>
                 <tableViewController storyboardIdentifier="info" id="Miv-eg-DQN" customClass="infoTableViewController" customModule="exercise2Kavak" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OQc-hf-QtZ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OQc-hf-QtZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="62" id="LwC-gl-I6H" customClass="infoTableViewCell" customModule="exercise2Kavak" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="62" id="LwC-gl-I6H" customClass="infoTableViewCell" customModule="exercise2Kavak" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="62"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LwC-gl-I6H" id="muE-SQ-gj7">

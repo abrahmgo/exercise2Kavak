@@ -19,12 +19,12 @@ class professionsViewModel{
     
     func getNumCellInSection() -> Int
     {
-        return dataSourceGnome.professions!.count
+        return dataSourceGnome.professions!.count == 0 ? 1 : dataSourceGnome.professions!.count
     }
     
     func getNameProfessions(index: Int) -> String
     {
-        return dataSourceGnome.professions![index]
+        return dataSourceGnome.professions!.count == 0 ? "Unemployed" : dataSourceGnome.professions![index]
     }
     
     func getImageProfession(nameProfession: String) -> UIImage?

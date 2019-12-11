@@ -19,12 +19,12 @@ class friendsViewModel{
     
     func getNumCellInSection() -> Int
     {
-        return dataSourceGnome.friends!.count
+        return dataSourceGnome.friends!.count == 0 ? 1 : dataSourceGnome.friends!.count
     }
     
     func getNameFriend(index: Int) -> String
     {
-        return dataSourceGnome.friends![index]
+        return dataSourceGnome.friends!.count == 0 ? "Without friends" : dataSourceGnome.friends![index]
     }
     
 }

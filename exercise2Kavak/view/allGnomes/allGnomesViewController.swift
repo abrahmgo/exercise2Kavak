@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 class allGnomesViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate, dataFiler, updateViewFavorites {
         
@@ -38,6 +39,7 @@ class allGnomesViewController: UIViewController,  UICollectionViewDataSource, UI
         {
             infoGnomeViewModel.shared.delegate = self
         }
+        self.navigationController?.hero.isEnabled = true
         filterView.alpha = 0
         filterView.delegate = self
         searchBar.delegate = self
@@ -178,6 +180,9 @@ class allGnomesViewController: UIViewController,  UICollectionViewDataSource, UI
         let image = viewModel.getGnomeImageAtIndex(url: gnomeIndex.thumbnail!)
         cell.showTitle.text = gnomeIndex.name!
         cell.showImage.image = image
+        cell.showImage.heroID = "image\(indexPath.row)"
+        cell.showTitle.heroID = "name\(indexPath.row)"
+        cell.hero.id = "Cell\(indexPath.row)"
         return cell
     }
     
@@ -197,6 +202,10 @@ class allGnomesViewController: UIViewController,  UICollectionViewDataSource, UI
         VC1.imageGnome = image
         VC1.useFlag = useFlag
         VC1.infoGnome = gnomeIndex
+        VC1.view.hero.id = "Cell\(indexPath.row)"
+        VC1.showImage.hero.id = "image\(indexPath.row)"
+        VC1.showTitle.hero.id = "name\(indexPath.row)"
+        self.navigationController?.hero.modalAnimationType = .auto
         self.navigationController?.pushViewController(VC1, animated: true)
     }
     

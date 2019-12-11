@@ -16,6 +16,11 @@ class mainViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.navigationBar.isTranslucent = true
+    }
+    
     @IBAction func allGnome(_ sender: UIButton) {
         let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "allGnome") as! allGnomesViewController
         VC1.useFlag = 1
