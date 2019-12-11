@@ -68,7 +68,7 @@ class allGnomesViewController: UIViewController,  UICollectionViewDataSource, UI
                    if status
                    {
                        DispatchQueue.main.async {
-                           utilActivityIndicator.shared.hideLoader(view: self.view)
+                            utilActivityIndicator.shared.hideLoader(view: self.view)
                            self.initValuesFilter()
                            self.downLoadImages()
                            self.collectionVIew.reloadData()
@@ -77,6 +77,7 @@ class allGnomesViewController: UIViewController,  UICollectionViewDataSource, UI
                    else
                    {
                        DispatchQueue.main.async {
+                        utilActivityIndicator.shared.hideLoader(view: self.view)
                            self.showAlertMessageCompletion(titleStr: "Gnome", messageStr: "the town is abandoned") { (_) in
                                self.navigationController?.popViewController(animated: true)
                            }
@@ -107,7 +108,7 @@ class allGnomesViewController: UIViewController,  UICollectionViewDataSource, UI
         searchBar.backgroundColor = UIColor.black.withAlphaComponent(0.7)
         searchBar.isUserInteractionEnabled = false
         UIView.animate(withDuration: 0.5) {
-            self.collectionVIew.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+            self.collectionVIew.backgroundColor = UIColor.black.withAlphaComponent(0.8)
             self.filterView.alpha = 1
         }
     }
@@ -121,7 +122,7 @@ class allGnomesViewController: UIViewController,  UICollectionViewDataSource, UI
         searchBar.backgroundColor = UIColor.black.withAlphaComponent(0)
         searchBar.isUserInteractionEnabled = true
         UIView.animate(withDuration: 0.5) {
-            self.collectionVIew.backgroundColor = UIColor.black.withAlphaComponent(0)
+            self.collectionVIew.backgroundColor = UIColor(hexString: "#118C8C").withAlphaComponent(1)
             self.filterView.alpha = 0
         }
     }

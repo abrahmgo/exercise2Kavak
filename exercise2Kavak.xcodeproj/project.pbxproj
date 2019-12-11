@@ -38,6 +38,7 @@
 		626F3723239F035D00E01AD0 /* apiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626F3722239F035D00E01AD0 /* apiHandler.swift */; };
 		626F3726239F03F900E01AD0 /* extensionDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626F3725239F03F900E01AD0 /* extensionDictionary.swift */; };
 		626F3729239F04F500E01AD0 /* gnomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626F3728239F04F500E01AD0 /* gnomeViewModel.swift */; };
+		629CDBB923A1426F00D3DFEF /* extensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629CDBB823A1426F00D3DFEF /* extensionUIView.swift */; };
 		62AE7515239EFFAB00CF710C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE7514239EFFAB00CF710C /* AppDelegate.swift */; };
 		62AE7517239EFFAB00CF710C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE7516239EFFAB00CF710C /* SceneDelegate.swift */; };
 		62AE751C239EFFAB00CF710C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62AE751A239EFFAB00CF710C /* Main.storyboard */; };
@@ -102,6 +103,7 @@
 		626F3722239F035D00E01AD0 /* apiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiHandler.swift; sourceTree = "<group>"; };
 		626F3725239F03F900E01AD0 /* extensionDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionDictionary.swift; sourceTree = "<group>"; };
 		626F3728239F04F500E01AD0 /* gnomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gnomeViewModel.swift; sourceTree = "<group>"; };
+		629CDBB823A1426F00D3DFEF /* extensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionUIView.swift; sourceTree = "<group>"; };
 		62AE7511239EFFAB00CF710C /* exercise2Kavak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = exercise2Kavak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62AE7514239EFFAB00CF710C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62AE7516239EFFAB00CF710C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				62603550239F2B3B006A6CAA /* extensionUIImage.swift */,
 				6241615B239F681D00602353 /* extensionUIVIewController.swift */,
 				62478445239FF193000D2562 /* extensionUIColor.swift */,
+				629CDBB823A1426F00D3DFEF /* extensionUIView.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -667,6 +670,7 @@
 				62416163239F6F1800602353 /* professionTableViewCell.swift in Sources */,
 				62416159239F63EE00602353 /* infoGnomeViewModel.swift in Sources */,
 				62416153239F62EC00602353 /* GnomeEntity+CoreDataClass.swift in Sources */,
+				629CDBB923A1426F00D3DFEF /* extensionUIView.swift in Sources */,
 				62478444239FF169000D2562 /* segmentControl.swift in Sources */,
 				62478449239FFEE5000D2562 /* mainViewController.swift in Sources */,
 				626F3721239F030A00E01AD0 /* endPoint.swift in Sources */,

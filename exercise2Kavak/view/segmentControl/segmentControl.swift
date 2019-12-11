@@ -18,9 +18,9 @@ class segmentControl: UIView {
         return _selectedIndex
     }
     
-    var textColor : UIColor = UIColor(hexString: "#467D80")
-    var selectorViewColor : UIColor = UIColor(hexString: "#8CF9FF")
-    var selectorTextColor : UIColor = UIColor(hexString: "#D9FDFF")
+    var textColor : UIColor = UIColor.black
+    var selectorViewColor : UIColor = UIColor(hexString: "#BF214B")
+    var selectorTextColor : UIColor = UIColor(hexString: "#BF214B")
     
     weak var delegate:segmentControlDelegate?
     

@@ -10,10 +10,12 @@ import UIKit
 
 class friendsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var backgroundCell: UIView!
     @IBOutlet weak var showTitle: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        backgroundCell.addShadowToCard(color: .black)
         // Initialization code
     }
 

@@ -26,6 +26,6 @@ class buttonStyle: UIButton {
         self.titleLabel?.font = .systemFont(ofSize: 22)
         self.setTitleColor(.black, for: .normal)
         self.titleLabel?.textAlignment = .center
-        self.backgroundColor = UIColor(hexString: "#ADCACC")
+        self.backgroundColor = UIColor(hexString: "#BF214B")
     }
 }

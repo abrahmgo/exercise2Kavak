@@ -32,7 +32,7 @@ class detailGnomeViewController: UIViewController, segmentControlDelegate {
         showImage.image = imageGnome
         showTitle.text = infoGnome?.name
         selector.delegate = self
-        selector.backgroundColor = UIColor(hexString: "#7A8E8F")
+        selector.backgroundColor = UIColor(hexString: "#118C8C")
         selector.setButtonTitles(buttonTitles: ["Profile","Friends","Jobs"])
         let imageFavorite = infoGnomeViewModel.shared.isFavoriteGnome(entityName: "GnomeEntity", infoGnome: infoGnome!)
         let nameImage = imageFavorite == true ? "favorite" : "nonFavorite"

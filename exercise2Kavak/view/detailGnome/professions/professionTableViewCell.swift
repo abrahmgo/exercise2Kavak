@@ -12,10 +12,12 @@ class professionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var showTitle: UILabel!
     @IBOutlet weak var showImage: UIImageView!
+    @IBOutlet weak var backgroundCell: UIView!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        backgroundCell.addShadowToCard(color: .black)
         // Initialization code
     }
 
